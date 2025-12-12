@@ -5,15 +5,23 @@ Este é o repositório do meu portfólio pessoal, desenvolvido com React, Tailwi
 🚀 Tecnologias Utilizadas
 
 React – criação da interface e componentes
+
 TailwindCSS – estilização rápida e responsiva
+
 EmailJS – envio de mensagens através do formulário de contato, sem backend
-Vite (se utilizado) – build e ambiente de desenvolvimento rápido
+
+Vite – build e ambiente de desenvolvimento rápido
 
 📁 Funcionalidades
 
 Página inicial com apresentação
+
 Seção de projetos
+
 Sessão de habilidades/tech stack
+
 Formulário de contato funcional com EmailJS
+
 Layout totalmente responsivo
+
 Design moderno utilizando Tailwind
