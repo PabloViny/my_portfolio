@@ -17,9 +17,9 @@ const Contact = () => {
       import.meta.env.VITE_TEMPLATE_ID, 
       e.target, 
       import.meta.env.VITE_PUBLIC_KEY).then((result) => {
-      alert("Message Sent!")
+      alert("Mensagem Enviada!")
       setFormData({name:"", email:"", message:""})
-    }).catch(() => alert("Oops! Something went wrong. Please, try again."))
+    }).catch(() => alert("Oops! Algo deu errado. Por favor, tente novamente."))
   }
 
   return (
