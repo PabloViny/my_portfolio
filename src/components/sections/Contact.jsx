@@ -4,22 +4,34 @@ import emailjs from "emailjs-com"
 
 const Contact = () => {
   const [formData, setFormData] = useState({
-    nome: "",
+    name: "",
     email: "",
     message: ""
   })
 
-  const handleSubmit = (e) => {
-    e.preventDefault()
+  const [loading, setLoading] = useState(false)
 
-    emailjs.sendForm(
-      import.meta.env.VITE_SERVICE_ID, 
-      import.meta.env.VITE_TEMPLATE_ID, 
-      e.target, 
-      import.meta.env.VITE_PUBLIC_KEY).then((result) => {
-      alert("Mensagem Enviada!")
-      setFormData({name:"", email:"", message:""})
-    }).catch(() => alert("Oops! Algo deu errado. Por favor, tente novamente."))
+  const handleSubmit = async (e) => {
+    e.preventDefault()
+    setLoading(true)
+
+    try {
+      await emailjs.sendForm(
+        import.meta.env.VITE_SERVICE_ID,
+        import.meta.env.VITE_TEMPLATE_ID,
+        e.target,
+        import.meta.env.VITE_PUBLIC_KEY
+      );
+
+      alert("Mensagem enviada!");
+      setFormData({ name: "", email: "", message: "" });
+
+    } catch (error) {
+    alert("Oops! Algo deu errado. Por favor, tente novamente.");
+    
+    } finally {
+    setLoading(false);
+    }
   }
 
   return (
@@ -62,7 +74,15 @@ const Contact = () => {
               onChange={(e) => setFormData({...formData, message: e.target.value})}/>
             </div>
 
-            <button type="submit" className="w-full bg-blue-500 text-white py-3 px-6 rounded font-medium transition relative overflow-hidden hover:-translate-y-0.5 hover:shadow-[0_0_15px_rgba(59, 130, 246, 0.4)] cursor-pointer">Enviar Mensagem</button>
+            <button
+              type="submit"
+              disabled={loading}
+              className={`w-full bg-blue-500 text-white py-3 px-6 rounded font-medium transition relative overflow-hidden hover:-translate-y-0.5 hover:shadow-[0_0_15px_rgba(59,130 246,0.4)] ${loading ? "opacity-50 cursor-not-allowed" : "cursor-pointer"}
+              `}>
+              {loading ? "Enviando..." : "Enviar Mensagem"}
+            </button>
+
+            
           </form>
         </div>   
       </RevealOnScroll>  
