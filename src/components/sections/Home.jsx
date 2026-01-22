@@ -10,7 +10,7 @@ const Home = () => {
             </h1>
 
             <p className="text-gray-400 text-lg mb-8 max-w-lg mx-auto">
-                Bem-vindo(a)! Sou um desenvolvedor front-end júnior construindo minha jornada na tecnologia. Este portfólio reúne experimentos, estudos e projetos que refletem minha evolução contínua.
+                Bem-vindo(a)! Sou um desenvolvedor júnior construindo minha jornada na tecnologia. Este portfólio reúne experimentos, estudos e projetos que refletem minha evolução contínua.
             </p>
             <div className="flex justify-center space-x-4">
                 <a href="#projects" className="bg-blue-600 text-white py-3 px-6 rounded font-medium transition relative overflow-hidden hover:-translate-y-0.5 hover:shadow-[0_0_15px_rgba(59, 130, 246, 0.4)]">
