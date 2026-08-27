@@ -1,30 +1,24 @@
-import {RevealOnScroll} from "./RevealOnScroll"
+import { RevealOnScroll } from "./RevealOnScroll"
+import { useLanguage } from "../../context/LanguageContext"
 
 const About = () => {
+  const { t } = useLanguage()
 
-    const frontendSkills = [
-        "ReactJS", 
-        "JavaScript", 
-        "TailwindCSS"
-    ]
-
-    const backendSkills = [
-        "Java",
-        "Python"
-    ]
-
+  const frontendSkills = ["ReactJS", "JavaScript", "TailwindCSS"]
+  const backendSkills = ["Java", "Python"]
 
   return (
     <section id="about" className="min-h-screen flex items-center justify-center py-20">
         
         <RevealOnScroll>
         <div className="max-w-3xl mx-auto px-4">
-            <h2 className="text-3xl font-bold mb-8 bg-gradient-to-r from-blue-600 to-cyan-400 bg-clip-text text-transparent text-center">Sobre mim</h2>
+            <h2 className="text-3xl font-bold mb-8 bg-gradient-to-r from-blue-600 to-cyan-400 bg-clip-text text-transparent text-center">
+              {t.about.title}
+            </h2>
 
             <div className="glass rounded-xl p-8 border-white/10 border:-translate-y-1 transition-all">
                 <p className="text-gray-300 mb-6">
-                    Sou estudante de Engenharia de Software e desenvolvedor front-end júnior, com foco em construir interfaces modernas, acessíveis e responsivas.
-                    Gosto de aprender, explorar novas ferramentas e transformar problemas em produtos práticos. Acredito em código limpo, evolução constante e em entregar experiências que realmente façam diferença para o usuário.
+                    {t.about.bio}
                 </p>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -54,20 +48,23 @@ const About = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
                 <div className="p-6 rounded-xl border-white/10 border hover:-translate-y-1 transition-all">
-                    <h3 className="text-xl font-bold mb-4"> Educação </h3>
+                    <h3 className="text-xl font-bold mb-4"> {t.about.education} </h3>
                     <ul className="list-disc list-inside text-gray-300 space-y-2">
                         <li>
-                            <strong> Bacharelado em Engenharia de Software</strong> - Centro Universitário Internacional UNINTER (2023-2027)
+                            <strong>{t.about.educationEntry}</strong>
                         </li>
                     </ul>
                 </div>
                 <div className="p-6 rounded-xl border-white/10 border hover:-translate-y-1 transition-all">
-                    <h3 className="text-xl font-bold mb-4"> Experiência </h3>
+                    <h3 className="text-xl font-bold mb-4"> {t.about.experience} </h3>
                     <div className="space-y-4 text-gray-300">
                         <div>
-                            <h4 className="font-semibold">Buscando primeira oportunidade como Desenvolvedor Front-end</h4>
-                            <p> • Atualmente focado em aprimorar habilidades em React, JavaScript e APIs REST</p>
-                            <p>• Desenvolvendo projetos próprios para evolução técnica e portfólio</p>
+                            <h4 className="font-semibold text-white">{t.about.experienceTitle}</h4>
+                            <h5 className="text-sm text-gray-500 italic">{t.about.experienceSubTitle}</h5>
+                            <p>{t.about.experienceDesc1}</p>
+                            <p>{t.about.experienceDesc2}</p>
+                            <p>{t.about.experienceDesc3}</p>
+                            <p>{t.about.experienceDesc4}</p>
                         </div>
                     </div>
                 </div>

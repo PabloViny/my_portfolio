@@ -9,13 +9,14 @@ import About from "./components/sections/About"
 import Projects from "./components/sections/Projects"
 import Contact from "./components/sections/Contact"
 import { useState } from "react"
+import { LanguageProvider } from "./context/LanguageContext"
 
 function App() {
   const [isLoaded, setIsLoaded] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
 
   return (
-    <>
+    <LanguageProvider>
       {!isLoaded && <LoadingScreen onComplete={() => setIsLoaded(true)}/>} {" "}
       <div className={`min-h-screen transition-opacity duration-700 ${isLoaded ? "opacity-100" : "opacity-0"} bg-black text-gray-100`}>
 
@@ -26,7 +27,7 @@ function App() {
         <Projects/>
         <Contact/>
       </div>
-    </>
+    </LanguageProvider>
   )
 }
 
