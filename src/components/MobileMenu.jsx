@@ -1,4 +1,8 @@
+import { useLanguage } from "../context/LanguageContext"
+
 const MobileMenu = ({ menuOpen, setMenuOpen }) => {
+  const { t } = useLanguage()
+
   return (
     <div
       className={`fixed inset-0 bg-[rgba(10,10,10,0.9)] z-40 flex flex-col items-center justify-center
@@ -20,8 +24,7 @@ const MobileMenu = ({ menuOpen, setMenuOpen }) => {
         className={`text-2xl font-semibold text-white my-4 transform transition-transform duration-300
         ${menuOpen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"}`}
       >
-        {" "}
-        Home{" "}
+        {t.nav.home}
       </a>
 
       <a
@@ -30,8 +33,7 @@ const MobileMenu = ({ menuOpen, setMenuOpen }) => {
         className={`text-2xl font-semibold text-white my-4 transform transition-transform duration-300
         ${menuOpen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"}`}
       >
-        {" "}
-        Sobre{" "}
+        {t.nav.about}
       </a>
 
       <a
@@ -40,8 +42,7 @@ const MobileMenu = ({ menuOpen, setMenuOpen }) => {
         className={`text-2xl font-semibold text-white my-4 transform transition-transform duration-300
         ${menuOpen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"}`}
       >
-        {" "}
-        Projetos{" "}
+        {t.nav.projects}
       </a>
 
       <a
@@ -50,8 +51,7 @@ const MobileMenu = ({ menuOpen, setMenuOpen }) => {
         className={`text-2xl font-semibold text-white my-4 transform transition-transform duration-300
         ${menuOpen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"}`}
       >
-        {" "}
-        Contato{" "}
+        {t.nav.contact}
       </a>
     </div>
   );

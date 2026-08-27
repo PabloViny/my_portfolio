@@ -1,6 +1,9 @@
-import { RevealOnScroll } from "./RevealOnScroll";
+import { RevealOnScroll } from "./RevealOnScroll"
+import { useLanguage } from "../../context/LanguageContext"
 
 const Projects = () => {
+  const { t } = useLanguage()
+
   return (
     <section
       id="projects"
@@ -9,7 +12,7 @@ const Projects = () => {
       <RevealOnScroll>
         <div className="max-w-5xl mx-auto px-4">
           <h2 className="text-3xl font-bold mb-8 bg-gradient-to-r from-blue-600 to-cyan-400 bg-clip-text text-transparent text-center">
-            Projetos
+            {t.projects.title}
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="p-6 rounded-xl border border-white/10 hover:-translate-y-1 hover:border-blue-500/30 hover:shadow-[0_2px_8px_rgba(59, 130, 246, 0.2)] transition">
@@ -17,10 +20,7 @@ const Projects = () => {
                 Personal Financial Control
               </h3>
               <p className="text-gray-400 mb-4">
-                Este é um projeto simples de controle financeiro feito com HTML,
-                CSS e JavaScript. A ideia é permitir que o usuário registre
-                entradas e saídas, veja o saldo atual e acompanhe o histórico de
-                movimentações.
+                {t.projects.project1.description}
               </p>
               <div className="flex flex-wrap gap-2 mb-4">
                 {["HTML", "CSS", "JavaScript"].map((tech, key) => (
@@ -39,8 +39,7 @@ const Projects = () => {
                   className="text-blue-400 hover:text-blue-300 transition-colors my-4"
                   target="_blank"
                 >
-                  {" "}
-                  View Project→{" "}
+                  {t.projects.viewProject}
                 </a>
               </div>
             </div>
@@ -50,10 +49,7 @@ const Projects = () => {
                 Personal Financial Control (React)
               </h3>
               <p className="text-gray-400 mb-4">
-                Aplicação de controle financeiro desenvolvida com React e Vite.
-                Permite registrar entradas e saídas, visualizar o saldo em tempo
-                real e acompanhar o histórico de transações de forma organizada
-                e responsiva.
+                {t.projects.project2.description}
               </p>
               <div className="flex flex-wrap gap-2 mb-4">
                 {["React", "Vite", "JavaScript", "HTML", "CSS"].map(
@@ -74,8 +70,7 @@ const Projects = () => {
                   className="text-blue-400 hover:text-blue-300 transition-colors my-4"
                   target="_blank"
                 >
-                  {" "}
-                  View Project→{" "}
+                  {t.projects.viewProject}
                 </a>
               </div>
             </div>
@@ -83,7 +78,7 @@ const Projects = () => {
         </div>
       </RevealOnScroll>
     </section>
-  );
-};
+  )
+}
 
-export default Projects;
+export default Projects
