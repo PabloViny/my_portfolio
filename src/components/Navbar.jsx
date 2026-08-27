@@ -1,5 +1,5 @@
 import { useEffect } from "react"
-import { useLanguage } from "../context/LanguageContext"
+import { useLanguage } from "../context/useLanguage"
 
 const Navbar = ({menuOpen, setMenuOpen}) => {
     const { language, toggleLanguage, t } = useLanguage()

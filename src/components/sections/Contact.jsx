@@ -1,7 +1,7 @@
 import { useState } from "react"
 import { RevealOnScroll } from "./RevealOnScroll"
 import emailjs from "@emailjs/browser"
-import { useLanguage } from "../../context/LanguageContext"
+import { useLanguage } from "../../context/useLanguage"
 
 const Contact = () => {
   const { t } = useLanguage()

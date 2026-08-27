@@ -1,4 +1,4 @@
-import { useLanguage } from "../context/LanguageContext"
+import { useLanguage } from "../context/useLanguage"
 
 const MobileMenu = ({ menuOpen, setMenuOpen }) => {
   const { t } = useLanguage()

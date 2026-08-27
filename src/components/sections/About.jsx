@@ -1,5 +1,5 @@
 import { RevealOnScroll } from "./RevealOnScroll"
-import { useLanguage } from "../../context/LanguageContext"
+import { useLanguage } from "../../context/useLanguage"
 
 const About = () => {
   const { t } = useLanguage()
