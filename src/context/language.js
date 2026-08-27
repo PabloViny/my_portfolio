@@ -34,10 +34,22 @@ export const translations = {
       title: "Projetos",
       viewProject: "Ver Projeto→",
       project1: {
+        title: "Site Institucional para Consultoria Empresarial",
         description:
-          "Este é um projeto simples de controle financeiro feito com HTML, CSS e JavaScript. A ideia é permitir que o usuário registre entradas e saídas, veja o saldo atual e acompanhe o histórico de movimentações.",
+          "Participação no desenvolvimento do site institucional de uma empresa de consultoria empresarial, com foco na criação de interfaces modernas, responsivas e componentes reutilizáveis. Atuação no desenvolvimento frontend e organização do código utilizando boas práticas.",
       },
       project2: {
+        title: "SaaS para Clínica Psicológica",
+        description:
+          "Atuação no desenvolvimento frontend de um SaaS para uma clínica psicológica, contribuindo na criação de páginas e componentes reutilizáveis, implementação de interfaces responsivas e integração com APIs.",
+      },
+      project3: {
+        title: "Digital Bank — Simulação Bancária Fullstack",
+        description:
+          "Aplicação fullstack de simulação bancária desenvolvida com React, TypeScript, Node.js e Express, utilizando 4 contas pré-definidas e regras de negócio para operações de saque e transferência, com validações e atualização de saldo em tempo real.",
+      },
+      project4: {
+        title: "Personal Financial Control",
         description:
           "Aplicação de controle financeiro desenvolvida com React e Vite. Permite registrar entradas e saídas, visualizar o saldo em tempo real e acompanhar o histórico de transações de forma organizada e responsiva.",
       },
@@ -83,10 +95,22 @@ export const translations = {
       title: "Projects",
       viewProject: "View Project→",
       project1: {
+        title: "Institutional Website for Business Consulting",
         description:
-          "A simple personal financial control project built with HTML, CSS and JavaScript. The idea is to let the user register income and expenses, view the current balance, and track the transaction history.",
+          "Contributed to the development of the institutional website for a business consulting company, focused on building modern, responsive interfaces and reusable components. Worked on frontend development and code organization following best practices.",
       },
       project2: {
+        title: "SaaS for Psychology Clinic",
+        description:
+          "Worked on the frontend development of a SaaS platform for a psychology clinic, contributing to the creation of pages and reusable components, implementation of responsive interfaces, and API integration.",
+      },
+      project3: {
+        title: "Digital Bank — Fullstack Banking Simulation",
+        description:
+          "Fullstack banking simulation app built with React, TypeScript, Node.js and Express. Features 4 pre-defined accounts and business rules for withdrawal and transfer operations, with real-time balance updates, centralized error handling, and race condition prevention.",
+      },
+      project4: {
+        title: "Personal Financial Control",
         description:
           "A financial control application built with React and Vite. It allows registering income and expenses, viewing the balance in real time, and tracking transaction history in an organized and responsive way.",
       },
