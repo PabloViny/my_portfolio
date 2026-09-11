@@ -12,7 +12,7 @@ const projects = [
   {
     key: "project2",
     techs: ["React", "TypeScript", "Tailwind CSS"],
-    link: "psicorpusconnect.com.br",
+    link: "https://psicorpusconnect.com.br",
     github: null,
   },
   {
